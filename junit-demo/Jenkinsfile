@@ -15,11 +15,13 @@ pipeline {
             steps {
                 withMaven (maven: 'apache-maven-3.0.5') {
                  sh 'mvn test'
+                 }
                  
                  stage('Deploy') {
             steps {
                 withMaven (maven: 'apache-maven-3.0.5') {
                  sh 'mvn deploy'
+                 }
                 
           
             }
